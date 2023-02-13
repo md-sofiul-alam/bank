@@ -7,9 +7,15 @@ document.getElementById('diposit-btn').addEventListener('click', function(){
     const diposite = parseFloat(dipositValue);
     const presentBalane = document.getElementById('balance');
     const presentBlanceNum = parseFloat(presentBalane.innerText);
-    dipositShow.innerText = dipositedNumber + diposite;
+    if(!isNaN(dipositedNumber) && dipositedNumber % 10===0){
+        dipositShow.innerText = dipositedNumber + diposite;
     presentBalane.innerText = dipositedNumber + presentBlanceNum;
     dipositField.value= '';
+    }
+    else{
+        alert("please provide an amount divided by 10");
+        dipositField.value= '';
+    }
 
 })
 
@@ -21,9 +27,15 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withdrawShowNumber = parseFloat(withdrawShow.innerText);
     const presentBalane = document.getElementById('balance');
     const presentBlanceNum = parseFloat(presentBalane.innerText);
-    withdrawShow.innerText = withdrawNumber + withdrawShowNumber;
+    if(!isNaN(withdrawNumber) && withdrawNumber % 10 ===0){
+        withdrawShow.innerText = withdrawNumber + withdrawShowNumber;
     presentBalane.innerText= presentBlanceNum-withdrawNumber;
     withdrawField.value ='';
+    }
+    else{
+        alert("please provide an amount divided by 10");
+        withdrawField.value ='';
+    }
     
 
 })
