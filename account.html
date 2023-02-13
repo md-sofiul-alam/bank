@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>NHBB</title>
+</head>
+<body class="w-9/12 mx-auto mt-10">
+    <h1 class="text-4xl font-bold text-violet-500 mx-auto mt-4 text-center">Welcome To NHBB</h1>
+<div class="grid grid-cols-3 gap-4 mt-10 w-9/12 mx-auto">
+    <div class=" bg-lime-500 rounded-md text-white text-center text-3xl font-medium py-4">
+        <h1>Diposited</h1>
+        <h2>$ <span id="diposite-show">00</span></h2>
+    </div>
+    <div class="bg-red-400 rounded-md text-white text-center text-3xl font-medium py-4">
+        <h1>Withdraw</h1>
+        <h2>$ <span id="withdraw-show">00</span></h2>
+    </div>
+    <div class="bg-cyan-600 rounded-md text-white text-center text-3xl font-medium py-4">
+        <h1>Balance</h1>
+        <h2>$ <span id="balance">1240</span></h2>
+    </div>
+</div>
+<div class="grid grid-cols-2 gap-6 mx-auto mt-6 w-9/12 text-center">
+    <div class="bg-lime-600 mt-10 rounded-md py-6">
+        <h1 class="text-white font-semibold text-2xl p-2">Diposite</h1>
+        <input type="text" placeholder="Enter Diposite Ammount" class=" rounded-md py-2 px-4" id="diposit-field">
+        <button class="block mx-auto mt-4 rounded py-2 px-4 bg-sky-600" id="diposit-btn">Diposite</button>
+    </div>
+    <div class="bg-fuchsia-400 mt-10 rounded-md py-6">
+        <h1 class="text-white font-semibold text-2xl p-2">Withdraw</h1>
+        <input type="text" placeholder="Enter Withdrown Ammount" class=" rounded-md py-2 px-4" id="withdraw-field">
+        <button class="block mx-auto mt-4 rounded py-2 px-4 bg-red-500" id="withdraw-btn">Withdraw</button>
+    </div>
+</div>
+<script src="js/account.js"></script>
+</body>
+</html>
