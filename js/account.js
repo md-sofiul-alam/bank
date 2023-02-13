@@ -27,15 +27,17 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withdrawShowNumber = parseFloat(withdrawShow.innerText);
     const presentBalane = document.getElementById('balance');
     const presentBlanceNum = parseFloat(presentBalane.innerText);
-    if(!isNaN(withdrawNumber) && withdrawNumber % 10 ===0){
+    if(!isNaN(withdrawNumber) && withdrawNumber % 10 ===0 && withdrawNumber <= presentBlanceNum){
         withdrawShow.innerText = withdrawNumber + withdrawShowNumber;
     presentBalane.innerText= presentBlanceNum-withdrawNumber;
     withdrawField.value ='';
     }
+    else if(!isNaN(withdrawNumber) && withdrawNumber % 10 ===0 && withdrawNumber > presentBlanceNum){
+            alert("Insufficient Balance");
+            withdrawField.value ='';
+        }
     else{
         alert("please provide an amount divided by 10");
         withdrawField.value ='';
     }
-    
-
 })
