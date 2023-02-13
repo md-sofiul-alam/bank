@@ -7,7 +7,7 @@ if(( email==='mee' && password==='123456')){
     window.location.href = "account.html";
 }
 else{
-    console.log('invailed input')
+    alert("Invalaied Id or Password")
 }
 
 })
