@@ -1,16 +1,16 @@
-document.getElementById('diposit-btn').addEventListener('click', function(){
-    const dipositField = document.getElementById('diposit-field');
-    const diposited= dipositField.value;
-    const dipositedNumber = parseFloat(diposited);
-    const dipositShow= document.getElementById('diposite-show');
-    const dipositValue = dipositShow.innerText;
-    const diposite = parseFloat(dipositValue);
+document.getElementById('deposit-btn').addEventListener('click', function(){
+    const depositField = document.getElementById('deposit-field');
+    const deposited= depositField.value;
+    const depositedNumber = parseFloat(deposited);
+    const depositShow= document.getElementById('deposite-show');
+    const depositValue = depositShow.innerText;
+    const deposite = parseFloat(depositValue);
     const presentBalane = document.getElementById('balance');
     const presentBlanceNum = parseFloat(presentBalane.innerText);
-    if(!isNaN(dipositedNumber) && dipositedNumber % 10===0){
-        dipositShow.innerText = dipositedNumber + diposite;
-    presentBalane.innerText = dipositedNumber + presentBlanceNum;
-    dipositField.value= '';
+    if(!isNaN(depositedNumber) && depositedNumber % 10===0){
+        depositShow.innerText = depositedNumber + deposite;
+    presentBalane.innerText = depositedNumber + presentBlanceNum;
+    depositField.value= '';
     }
     else{
         alert("please provide an amount divided by 10");
