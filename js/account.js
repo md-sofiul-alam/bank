@@ -13,7 +13,7 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     depositField.value= '';
     }
     else{
-        alert("please provide an amount divided by 10");
+        alert("Please provide an amount divided by 10");
         dipositField.value= '';
     }
 
@@ -37,7 +37,7 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
             withdrawField.value ='';
         }
     else{
-        alert("please provide an amount divided by 10");
+        alert("Please provide an amount divided by 10");
         withdrawField.value ='';
     }
 })
